@@ -325,11 +325,13 @@
       <article class="msc-visual-card">
         <div>
           <p class="eyebrow">Model Results</p>
-          <h3>Ridge won on accuracy and explainability.</h3>
-          <p>The weekly Ridge model produced the strongest result with R² of 0.994 and MAE of 0.012. The coefficient view also made the model readable, which matters when predictions need stakeholder trust.</p>
+          <h3>Ridge beat every Random Forest variant.</h3>
+          <p>I tested Random Forest across simple, default and deeper configurations. The best Random Forest reached R² of 0.970, while weekly Ridge reached 0.994 with lower error. That made Ridge the stronger choice on accuracy and trust.</p>
+          <p>The comparison also explained why. Ridge spread weight across related progress signals, while Random Forest concentrated importance heavily on rolling variance. For this dataset, the regularised linear model used the engineered structure more effectively.</p>
         </div>
         <img src="assets/images/msc/model-comparison.png" alt="Weekly model comparison table" />
         <img src="assets/images/msc/ridge-coefficients.png" alt="Ridge coefficient magnitude visual" />
+        <img src="assets/images/msc/rf-importance.png" alt="Random Forest feature importance visual" />
       </article>
 
       <article class="msc-visual-card wide">
