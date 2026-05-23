@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Designing a Governed Fabric Reporting Layer | Abdul Basit Sultan</title>
+<meta name="description" content="Microsoft Fabric reporting layer case study covering Lakehouse, Python notebooks, Power BI and governance documentation." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html" aria-label="Home"><span class="brand-mark">ABS</span><span>Abdul Basit Sultan</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+  <a class="header-link" href="https://www.linkedin.com/in/abdul-basit-sultan/" target="_blank" rel="noopener">LinkedIn</a>
+</header>
+
+<main>
+  <section class="project-hero section">
+    <a class="back-link" href="../index.html#work">Back to work</a>
+    <p class="eyebrow">Microsoft Fabric · Lakehouse · Power BI · Governance</p>
+    <h1>Designing a Governed Fabric Reporting Layer</h1>
+    <p class="project-summary">I worked on moving ADA reporting from direct SharePoint to Power BI reporting into a more governed Microsoft Fabric structure. The work focused on centralising reporting data in a Lakehouse, using Python notebooks for Bronze, Silver and Gold transformation layers and connecting Power BI to cleaner reporting ready tables.</p>
+    <div class="project-metrics">
+      <span>SharePoint source files</span>
+      <span>Python notebooks</span>
+      <span>Bronze, Silver and Gold layers</span>
+      <span>Power BI curated outputs</span>
+    </div>
+  </section>
+
+  <section class="section visual-list">
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Architecture</p>
+        <h2>Business files stayed in SharePoint. Reporting logic moved into Fabric.</h2>
+        <p>ADA reporting data lived across SharePoint folders and spreadsheet based team files. Before Fabric, Power BI reports were linked closer to source files, which made consistency, transformation control, refresh reliability and governance harder to scale.</p>
+      </div>
+      <figure><img src="../assets/images/fabric/ada-source-01.png" alt="ADA Fabric reporting architecture"><figcaption>End to end reporting flow from source files to Fabric, security and Power BI reporting.</figcaption></figure>
+    </article>
+  </section>
+
+  <section class="section article-grid">
+    <article>
+      <p class="eyebrow">The Problem</p>
+      <h2>The reporting estate was growing faster than the process behind it.</h2>
+      <p>Executive summary, health and safety, planning, design, OFCI, commercial, schedule, quality, environmental and commissioning data had separate source files and reporting requirements. Each area could exist, but the process was harder to audit and harder to repeat.</p>
+    </article>
+    <article>
+      <p class="eyebrow">What I Built</p>
+      <h2>A medallion reporting layer inside Microsoft Fabric.</h2>
+      <p>Source data was brought into a Lakehouse and processed through controlled transformation stages. Bronze preserved raw tables, Silver applied cleaning and standardisation, and Gold produced reporting ready tables for Power BI.</p>
+    </article>
+  </section>
+
+  <section class="section phase-grid">
+    <article><span>01</span><h3>Data source</h3><p>SharePoint folders and discipline files such as executive summary, health and safety, planning, design, OFCI, commercial, schedule, quality, environmental and commissioning.</p></article>
+    <article><span>02</span><h3>Fabric transformation</h3><p>Python notebooks and pipelines moved data through controlled transformation stages instead of keeping business logic scattered inside individual Power BI files.</p></article>
+    <article><span>03</span><h3>Bronze layer</h3><p>Raw source tables landed with minimal transformation. This preserved the original data and gave the team an auditable starting point.</p></article>
+    <article><span>04</span><h3>Silver layer</h3><p>Data was cleaned, standardised and prepared. This included aligning naming, shaping columns and applying business rules needed before reporting.</p></article>
+    <article><span>05</span><h3>Gold layer</h3><p>Final reporting ready tables were created for Power BI. These tables were cleaner, more consistent and easier to reuse across reporting pages.</p></article>
+    <article><span>06</span><h3>Security and governance</h3><p>Azure Active Directory groups and governance registers documented access, ownership, refresh logic and report status.</p></article>
+  </section>
+
+  <section class="section visual-list">
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Fabric Transformation</p>
+        <h2>Python notebooks held the repeatable business logic.</h2>
+        <p>The transformation layer separated extraction, cleaning and reporting outputs, which made the process easier to debug and explain.</p>
+      </div>
+      <div class="image-grid two">
+        <figure><img src="../assets/images/fabric/ada-source-03.png" alt="Fabric transformation layer"><figcaption>Fabric transformation crop showing notebooks and Lakehouse tables.</figcaption></figure>
+        <figure><img src="../assets/images/fabric/ada-source-04.png" alt="Medallion Lakehouse detail"><figcaption>Bronze, Silver and Gold Lakehouse structure.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Governance Evidence</p>
+        <h2>The layer was documented, not just built.</h2>
+        <p>The governance workbook tracked Fabric artefacts, table mappings, report status, workspace ownership and security groups. That made the build easier to explain and easier to hand over.</p>
+      </div>
+      <div class="image-grid two">
+        <figure><img src="../assets/images/fabric/ada-source-08.png" alt="Fabric artefacts governance register"><figcaption>Fabric artefacts register with Lakehouse layers, pipeline and notebooks.</figcaption></figure>
+        <figure><img src="../assets/images/fabric/ada-source-09.png" alt="Table lineage governance register"><figcaption>Table lineage connecting source files, notebooks, Lakehouse tables and Power BI names.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Access Control</p>
+        <h2>Reports and audiences were mapped clearly.</h2>
+        <p>Report status and security groups were documented so access did not depend on informal instructions.</p>
+      </div>
+      <div class="image-grid two">
+        <figure><img src="../assets/images/fabric/ada-source-10.png" alt="Power BI report status register"><figcaption>Report status, dataset status, workspace and audience level access.</figcaption></figure>
+        <figure><img src="../assets/images/fabric/ada-source-12.png" alt="Security groups governance register"><figcaption>Security group register showing reporting levels and role based access.</figcaption></figure>
+      </div>
+    </article>
+  </section>
+
+  <section class="section outcome-panel">
+    <p class="eyebrow">What It Changed</p>
+    <h2>Transformation moved out of scattered report files and into a controlled Fabric layer.</h2>
+    <p>Reports became connected to documented tables. Lineage became easier to trace. Refresh logic became easier to manage. Access became mapped through defined security groups.</p>
+    <a class="btn secondary" href="../index.html#work">Back to work</a>
+  </section>
+</main>
+</body>
+</html>

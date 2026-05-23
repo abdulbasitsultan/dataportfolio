@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Automated Construction Progress Early Warning System | Abdul Basit Sultan</title>
+<meta name="description" content="Masters project using Python, Ridge Regression and Random Forest to forecast construction progress variance." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html" aria-label="Home"><span class="brand-mark">ABS</span><span>Abdul Basit Sultan</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+  <a class="header-link" href="https://www.linkedin.com/in/abdul-basit-sultan/" target="_blank" rel="noopener">LinkedIn</a>
+</header>
+
+<main>
+  <section class="project-hero section light-hero">
+    <a class="back-link" href="../index.html#work">Back to work</a>
+    <p class="eyebrow">Masters Project · Python · Machine Learning · Construction Analytics</p>
+    <h1>Automated Construction Progress Early Warning System</h1>
+    <p class="project-summary">I built a Python based forecasting pipeline that moved construction progress reporting from manual baseline versus update comparisons into a reproducible early warning workflow. The system transformed planned and actual cumulative progress data, engineered time aware features and forecasted next step variance at package level.</p>
+    <div class="project-actions">
+      <a class="btn primary" href="../assets/downloads/msc-early-warning-system.pdf" target="_blank" rel="noopener">Open MSc PDF</a>
+      <a class="btn secondary" href="../index.html#contact">Contact</a>
+    </div>
+    <div class="project-metrics">
+      <span>R² 0.994 on weekly test data</span>
+      <span>MAE 0.012</span>
+      <span>5 feature families engineered</span>
+      <span>Ridge beat all Random Forest variants</span>
+    </div>
+  </section>
+
+  <section class="section article-grid">
+    <article>
+      <p class="eyebrow">The Problem</p>
+      <h2>Progress reporting was descriptive and manual.</h2>
+      <p>Planned and actual progress existed, but it showed what had already happened. I reframed the task as predicting next step variance so teams could see where the next update was likely to land.</p>
+    </article>
+    <article>
+      <p class="eyebrow">What I Built</p>
+      <h2>A reproducible forecasting pipeline.</h2>
+      <p>I reshaped wide progress sheets into long format, created variance as actual progress minus planned progress, engineered current state, lag, speed gap, rolling trend and time order features, then compared Ridge Regression with Random Forest using chronological splits.</p>
+    </article>
+  </section>
+
+  <section class="section visual-list">
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Data Movement</p>
+        <h2>From workbook to model ready data.</h2>
+        <p>The original file was designed for people, not forecasting. Dates sat across columns and planned and actual values lived in separate sheets. The pipeline made time a proper variable.</p>
+      </div>
+      <figure><img src="../assets/images/msc/python-pipeline.png" alt="Python forecasting pipeline"><figcaption>Pipeline from source workbook to early warning output.</figcaption></figure>
+    </article>
+
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Signal</p>
+        <h2>The planned and actual curves were pulling apart.</h2>
+        <p>The widening gap made the forecasting task meaningful. Lagged variance became the strongest signal because packages drifting from plan tended to carry that behaviour forward.</p>
+      </div>
+      <figure><img src="../assets/images/msc/progress-gap.png" alt="Planned versus actual cumulative progress"><figcaption>Planned and actual cumulative progress over time.</figcaption></figure>
+    </article>
+
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Model Comparison</p>
+        <h2>Ridge was simpler and stronger for this dataset.</h2>
+        <p>Random Forest was tested as a non linear comparison, including deeper configurations. The best Random Forest reached R² of 0.970, while weekly Ridge reached 0.994 with lower error. The result showed that interpretable models can be stronger when the data structure is stable and explainability matters.</p>
+      </div>
+      <div class="image-grid two">
+        <figure><img src="../assets/images/msc/model-comparison.png" alt="Weekly model comparison metrics"><figcaption>Weekly Ridge compared with Random Forest variants.</figcaption></figure>
+        <figure><img src="../assets/images/msc/rf-importance.png" alt="Random Forest feature importance"><figcaption>Random Forest concentrated heavily on rolling variance.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="visual-block">
+      <div>
+        <p class="eyebrow">Output</p>
+        <h2>Forecasts landed where project teams manage the work.</h2>
+        <p>The pipeline produced package level predictions, not only aggregate summaries. That makes the early warning useful because someone can see which package needs attention.</p>
+      </div>
+      <figure><img src="../assets/images/msc/ridge-baseline.png" alt="Ridge actual versus predicted comparison"><figcaption>Ridge actual versus predicted variance across the test period.</figcaption></figure>
+    </article>
+  </section>
+
+  <section class="section outcome-panel">
+    <p class="eyebrow">What It Changed</p>
+    <h2>The project moved reporting from hindsight to early warning.</h2>
+    <p>The work showed how planned and actual progress data already available in a project environment can become a forecasting signal when the data is reshaped, features are engineered properly and model choice is driven by the structure of the problem.</p>
+    <a class="btn secondary" href="../index.html#work">Back to work</a>
+  </section>
+</main>
+</body>
+</html>
