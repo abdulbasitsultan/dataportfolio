@@ -462,9 +462,9 @@ p {
 .visual-block {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 26px;
   align-items: start;
-  padding: 76px 0;
+  padding: clamp(46px, 6vw, 68px) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -479,20 +479,27 @@ p {
 
 .visual-block > figure,
 .visual-block > .image-grid {
+  width: min(100%, 980px);
   min-width: 0;
+  justify-self: center;
 }
 
 figure {
   display: grid;
   gap: 14px;
+  justify-items: center;
 }
 
 figure img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: min(620px, calc(100vh - 170px));
+  height: auto;
   display: block;
   background: #f8f8f4;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 18px;
+  border-radius: 14px;
+  object-fit: contain;
 }
 
 .visual-block figure img {
@@ -500,6 +507,8 @@ figure img {
 }
 
 figcaption {
+  width: 100%;
+  max-width: 760px;
   color: var(--soft);
   font-size: 0.94rem;
   line-height: 1.55;
@@ -507,7 +516,7 @@ figcaption {
 
 .image-grid.two {
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 26px;
 }
 
 .outcome-panel {
@@ -559,9 +568,7 @@ figcaption {
   }
 
   .visual-block {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 58px 0;
+    gap: 24px;
   }
 
   .value-grid,
@@ -632,7 +639,17 @@ figcaption {
   }
 
   .visual-block {
-    padding: 42px 0;
+    padding: 40px 0;
+  }
+
+  .visual-block > figure,
+  .visual-block > .image-grid {
+    width: 100%;
+  }
+
+  figure img {
+    max-height: min(520px, 58vh);
+    border-radius: 12px;
   }
 
   .project-summary,
