@@ -340,9 +340,37 @@
           <h3>The forecast landed at the work package level.</h3>
           <p>The pipeline produced predictions where project teams manage the work, not just at an aggregate level. That matters because early warning only becomes useful when someone can see which package needs attention.</p>
         </div>
-        <div class="msc-image-pair">
+        <div class="msc-output-layout">
           <img src="assets/images/msc/ridge-baseline.png" alt="Ridge actual versus predicted variance visual" />
-          <img src="assets/images/msc/package-predictions.png" alt="Package level prediction output table" />
+          <div class="prediction-output-card" aria-label="Readable sample of package level prediction output">
+            <p class="eyebrow">Sample Output</p>
+            <h4>Package level prediction check</h4>
+            <div class="prediction-row header">
+              <span>Date</span>
+              <span>Actual</span>
+              <span>Ridge</span>
+              <span>Error</span>
+            </div>
+            <div class="prediction-row">
+              <span>Dec 23</span>
+              <span>-0.2566</span>
+              <span>-0.2530</span>
+              <span>0.0036</span>
+            </div>
+            <div class="prediction-row">
+              <span>Jan 06</span>
+              <span>-0.2687</span>
+              <span>-0.2672</span>
+              <span>0.0015</span>
+            </div>
+            <div class="prediction-row">
+              <span>Feb 10</span>
+              <span>-0.3021</span>
+              <span>-0.3019</span>
+              <span>0.0002</span>
+            </div>
+            <p class="prediction-note">The model output is close enough to flag package movement before the next review, without asking a recruiter to zoom into a dense table.</p>
+          </div>
         </div>
       </article>
     </div>
