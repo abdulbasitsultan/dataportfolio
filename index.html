@@ -235,13 +235,114 @@
     </div>
   </section>
 
-  <section id="msc" class="section msc-section">
-    <div>
+  <section id="msc" class="section msc-case-section">
+    <div class="section-heading">
       <p class="eyebrow">MSc Project Highlight</p>
-      <h2>Applied analytics with a stronger data science base.</h2>
+      <h2>Progress reports show what happened. I built what comes next.</h2>
+      <p>My MSc project turned a construction progress workbook into a package level early warning system. The goal was to predict next reporting variance before the update arrived, so project teams could see risk earlier.</p>
     </div>
-    <div>
-      <p>I am completing an MSc in Data Science and Analytics at the University of Hertfordshire, building on my BI experience with machine learning, predictive modelling and applied analytics. The aim is practical: stronger analysis, better modelling choices and clearer explanation of what a result means for a decision maker.</p>
+
+    <div class="msc-hero-grid">
+      <div class="msc-summary-card">
+        <p class="eyebrow">Predictive Analytics</p>
+        <h3>From operational spreadsheet to forecasting pipeline.</h3>
+        <p>The source file was built for manual monitoring, with planned and actual progress spread across date columns. I reshaped it into modelling data, engineered temporal features, trained models with chronological splits and produced package level predictions that could support earlier intervention.</p>
+        <div class="tag-row compact" aria-label="MSc tools used">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Scikit learn</span>
+          <span>Feature Engineering</span>
+          <span>Ridge Regression</span>
+        </div>
+        <a class="btn secondary" href="assets/downloads/msc-early-warning-system.pdf" target="_blank" rel="noopener">Open MSc PDF</a>
+      </div>
+      <div class="msc-metrics">
+        <article>
+          <span>0.994</span>
+          <p>R² on weekly test data</p>
+        </article>
+        <article>
+          <span>0.012</span>
+          <p>Mean absolute error</p>
+        </article>
+        <article>
+          <span>5</span>
+          <p>Feature families engineered</p>
+        </article>
+        <article>
+          <span>Ridge</span>
+          <p>Outperformed all Random Forest variants</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="msc-story-grid">
+      <article>
+        <span>Problem</span>
+        <h3>Reports were accurate, but reactive.</h3>
+        <p>Traditional progress reporting showed which work packages were already behind. By then, the team was responding after the best window for early action had started to close.</p>
+      </article>
+      <article>
+        <span>Idea</span>
+        <h3>Predict the next variance.</h3>
+        <p>I reframed progress variance as a supervised learning target. Instead of calculating today’s gap, the model estimated where the next reporting update would land.</p>
+      </article>
+      <article>
+        <span>Working</span>
+        <h3>Build the pipeline first.</h3>
+        <p>I converted wide progress sheets into long format, merged planned and actual values, built daily and weekly datasets, created lag, rolling, interval and time features, then compared models on future observations.</p>
+      </article>
+      <article>
+        <span>Outcome</span>
+        <h3>Simple model, strong signal.</h3>
+        <p>Ridge Regression performed best because the engineered features captured the structure of the problem. It was accurate, explainable and more useful than a complex model that was harder to trust.</p>
+      </article>
+    </div>
+
+    <div class="msc-visual-grid">
+      <article class="msc-visual-card wide">
+        <div>
+          <p class="eyebrow">Data Journey</p>
+          <h3>The workbook was not model ready.</h3>
+          <p>Dates were spread across columns and planned and actual progress lived in separate sheets. The first real task was reshaping the reporting file into data a forecasting model could use.</p>
+        </div>
+        <div class="msc-image-pair">
+          <img src="assets/images/msc/raw-workbook.png" alt="Original progress workbook visual" />
+          <img src="assets/images/msc/python-pipeline.png" alt="Python forecasting pipeline visual" />
+        </div>
+      </article>
+
+      <article class="msc-visual-card">
+        <div>
+          <p class="eyebrow">Signal</p>
+          <h3>The gap was visible over time.</h3>
+          <p>The planned and actual curves diverged, which made the forecasting task meaningful. Lagged variance became the strongest signal because packages drifting from plan tended to carry that behaviour forward.</p>
+        </div>
+        <img src="assets/images/msc/progress-gap.png" alt="Planned and actual cumulative progress visual" />
+        <img src="assets/images/msc/lag-signal.png" alt="Lagged variance and forecast target visual" />
+      </article>
+
+      <article class="msc-visual-card">
+        <div>
+          <p class="eyebrow">Model Results</p>
+          <h3>Ridge won on accuracy and explainability.</h3>
+          <p>The weekly Ridge model produced the strongest result with R² of 0.994 and MAE of 0.012. The coefficient view also made the model readable, which matters when predictions need stakeholder trust.</p>
+        </div>
+        <img src="assets/images/msc/model-comparison.png" alt="Weekly model comparison table" />
+        <img src="assets/images/msc/ridge-coefficients.png" alt="Ridge coefficient magnitude visual" />
+      </article>
+
+      <article class="msc-visual-card wide">
+        <div>
+          <p class="eyebrow">Output</p>
+          <h3>The forecast landed at the work package level.</h3>
+          <p>The pipeline produced predictions where project teams manage the work, not just at an aggregate level. That matters because early warning only becomes useful when someone can see which package needs attention.</p>
+        </div>
+        <div class="msc-image-pair">
+          <img src="assets/images/msc/ridge-baseline.png" alt="Ridge actual versus predicted variance visual" />
+          <img src="assets/images/msc/package-predictions.png" alt="Package level prediction output table" />
+        </div>
+      </article>
     </div>
   </section>
 
