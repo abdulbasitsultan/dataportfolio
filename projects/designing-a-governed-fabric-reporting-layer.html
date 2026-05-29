@@ -12,7 +12,7 @@
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="../index.html" aria-label="Home"><span class="brand-mark">ABS</span><span>Abdul Basit Sultan</span></a>
+  <a class="brand" href="../index.html" aria-label="Home"><img class="brand-mark" src="../assets/images/profile.jpg" alt="" aria-hidden="true"><span>Abdul Basit Sultan</span></a>
   <nav class="nav" aria-label="Main navigation">
     <a href="../index.html">Home</a>
     <a href="../index.html#work">Work</a>
@@ -44,7 +44,24 @@
         <h2>Business files stayed in SharePoint. Reporting logic moved into Fabric.</h2>
         <p>ADA reporting data lived across SharePoint folders and spreadsheet based team files. Before Fabric, Power BI reports were linked closer to source files, which made consistency, transformation control, refresh reliability and governance harder to scale.</p>
       </div>
-      <figure><img src="../assets/images/fabric/ada-source-01.png" alt="ADA Fabric reporting architecture"><figcaption>End to end reporting flow from source files to Fabric, security and Power BI reporting.</figcaption></figure>
+      <div class="architecture-crops">
+        <figure>
+          <img src="../assets/images/fabric/ada-arch-01-data-source.jpg" alt="ADA architecture data source crop">
+          <figcaption><strong>Data source.</strong> SharePoint folders, Excel files and project reporting inputs.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/fabric/ada-arch-02-transformation.jpg" alt="ADA architecture data transformation crop">
+          <figcaption><strong>Data transformation.</strong> Microsoft Fabric, notebooks, Lakehouse layers and report development.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/fabric/ada-arch-03-security.jpg" alt="ADA architecture security crop">
+          <figcaption><strong>Security.</strong> Azure Active Directory groups controlling report audience access.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/fabric/ada-arch-04-power-bi-reporting.jpg" alt="ADA architecture Power BI reporting crop">
+          <figcaption><strong>Power BI reporting.</strong> Published Apps and curated report outputs for each reporting area.</figcaption>
+        </figure>
+      </div>
     </article>
   </section>
 
@@ -77,7 +94,10 @@
         <h2>Python notebooks held the repeatable business logic.</h2>
         <p>The transformation layer separated extraction, cleaning and reporting outputs, which made the process easier to debug and explain.</p>
       </div>
-      <figure><img src="../assets/images/fabric/ada-transform-reporting-crop.png" alt="Fabric transformation and reporting architecture"><figcaption>Fabric transformation flow from source files through notebooks, Lakehouse layers and curated Power BI outputs.</figcaption></figure>
+      <figure class="architecture-detail">
+        <img src="../assets/images/fabric/ada-arch-medallion-lakehouse.jpg" alt="ADA medallion Lakehouse architecture crop">
+        <figcaption>Focused crop of the Bronze, Silver and Gold Lakehouse structure used to separate raw, cleaned and reporting ready tables.</figcaption>
+      </figure>
     </article>
 
     <article class="visual-block">
@@ -104,8 +124,11 @@
 
   <section class="section outcome-panel">
     <p class="eyebrow">What It Changed</p>
-    <h2>Transformation moved out of scattered report files and into a controlled Fabric layer.</h2>
-    <p>Reports became connected to documented tables. Lineage became easier to trace. Refresh logic became easier to manage. Access became mapped through defined security groups.</p>
+    <h2>ADA moved to a central reporting system that was easier to refresh, control and maintain.</h2>
+    <p>Before the Fabric setup, reporting became harder to manage as more dashboards, users and project areas were added. Logic could sit in different places, refresh issues were harder to trace and report access depended too much on individual workspaces or manual sharing.</p>
+    <p>The new setup gave ADA a central BI layer in Microsoft Fabric. Data moved through Lakehouse tables, notebooks and curated reporting layers before reaching Power BI. Deployment pipelines helped separate development, testing and live reporting, while scheduled refreshes made dashboard updates more reliable.</p>
+    <p>Power BI Apps gave users one organised place to access the right dashboards, and Azure AD groups made permissions easier to manage across different audiences.</p>
+    <p>Result: ADA had a more controlled reporting estate across 9 project areas, with clearer refresh ownership, centralised data logic, stronger access control and a setup that was easier to maintain as reporting needs grew.</p>
     <a class="btn secondary" href="../index.html#work">Back to work</a>
   </section>
 </main>
