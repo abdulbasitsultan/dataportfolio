@@ -7,25 +7,37 @@
 <meta name="description" content="Power BI reporting layer case study covering cost, cashflow, capacity and schedule reporting." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#f5f3ee" />
 <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="../index.html" aria-label="Home"><img class="brand-mark" src="../assets/images/profile.jpg" alt="" aria-hidden="true"><span>Abdul Basit Sultan</span></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="../index.html">Home</a>
-    <a href="../index.html#work">Work</a>
-    <a href="../index.html#skills">Skills</a>
-    <a href="../index.html#about">About</a>
-    <a href="../index.html#contact">Contact</a>
-  </nav>
-  <a class="header-link" href="https://www.linkedin.com/in/abdul-basit-sultan/" target="_blank" rel="noopener">LinkedIn</a>
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Abdul Basit Sultan, home">
+      <img class="brand-mark" src="../assets/images/profile.jpg" alt="" width="36" height="36">
+      <span class="brand-text">
+        <span class="brand-name">Abdul Basit Sultan</span>
+        <span class="brand-role">BI Developer · London</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Menu</span>
+      <span class="bars" aria-hidden="true"></span>
+    </button>
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#process">Process</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="../index.html#contact">Get in touch</a>
+    </nav>
+  </div>
 </header>
 
 <main>
   <section class="project-hero section">
-    <a class="back-link" href="../index.html#work">Back to work</a>
+    <a class="back-link" href="../index.html#work"><span aria-hidden="true">&larr;</span> Back to work</a>
     <p class="eyebrow">Analytics Engineering · BI Development · Stakeholder Reporting</p>
     <h1>One Portfolio. Four Versions of the Truth.</h1>
     <p class="project-summary">Four teams were working from disconnected reporting sources across cost, cashflow, progress and schedule reporting. I built a unified Power BI reporting layer that standardised project identities, separated actuals from forecasts and gave stakeholders one agreed view for reviews.</p>
@@ -33,10 +45,10 @@
       <a class="btn primary" href="../index.html#contact">Contact</a>
     </div>
     <div class="project-metrics">
-      <span>€977M budget tracked</span>
-      <span>708MW capacity monitored</span>
-      <span>4 sources unified</span>
-      <span>0 spreadsheets opened in meetings</span>
+      <div class="kpi"><strong>€977M</strong><span>budget tracked</span></div>
+      <div class="kpi"><strong>708MW</strong><span>capacity monitored</span></div>
+      <div class="kpi"><strong>4</strong><span>sources unified</span></div>
+      <div class="kpi"><strong>0</strong><span>spreadsheets opened in meetings</span></div>
     </div>
   </section>
 
@@ -91,12 +103,20 @@
     </article>
   </section>
 
-  <section class="section outcome-panel">
+  <div class="outcome-wrap"><section class="outcome-panel">
     <p class="eyebrow">What It Changed</p>
     <h2>The reporting layer removed repeated reconciliation from decision making.</h2>
     <p>Commercial teams could track budget status. Finance could validate cashflow month by month. Leadership could monitor capacity and readiness milestones. Project managers could see schedule variance before the review started.</p>
     <a class="btn secondary" href="../index.html#work">Back to work</a>
-  </section>
+  </section></div>
 </main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> Abdul Basit Sultan</p>
+    <p><a href="../index.html#work">&larr; All work</a></p>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
 </body>
 </html>
